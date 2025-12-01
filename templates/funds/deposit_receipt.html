@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Deposit Receipt</title>
+</head>
+<body>
+    <h2>Deposit Receipt</h2>
+    <p>Dear {{ user.full_name }},</p>
+    <p>This is a confirmation of your recent deposit:</p>
+    <ul>
+        <li>Amount Deposited: {{ amount }}</li>
+        <li>Performed By: {{ performed_by.full_name }} ({{ performed_by.email }})</li>
+        <li>Date & Time: {{ timestamp }}</li>
+        <li>Current Liquid Balance: {{ liquid_balance }}</li>
+    </ul>
+    <p>Thank you for using our system!</p>
+</body>
+</html>

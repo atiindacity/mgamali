@@ -1,0 +1,26 @@
+<h2>User Balance Report</h2>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Liquid Balance</th>
+            <th>Reserve Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for wallet in wallets %}
+        <tr>
+            <td>{{ wallet.user.full_name }}</td>
+            <td>{{ wallet.user.email }}</td>
+            <td>{{ wallet.liquid }}</td>
+            <td>{{ wallet.reserve }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No users found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

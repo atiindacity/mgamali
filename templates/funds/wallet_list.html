@@ -1,0 +1,15 @@
+<h2>All Wallets</h2>
+<table border="1">
+    <tr>
+        <th>User</th>
+        <th>Liquid Balance</th>
+        <th>Reserve Balance</th>
+    </tr>
+    {% for wallet in wallets %}
+    <tr>
+        <td>{{ wallet.user.full_name }} ({{ wallet.user.email }})</td>
+        <td>{{ wallet.liquid }}</td>
+        <td>{{ wallet.reserve }}</td>
+    </tr>
+    {% endfor %}
+</table>

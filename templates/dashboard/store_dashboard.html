@@ -1,0 +1,21 @@
+{% extends "dashboard/base.html" %}
+
+{% block menu %}
+<h5>Store Menu</h5>
+<a href="#">Dashboard</a>
+<a href="{% url 'deposit_funds' %}">Deposit</a>
+<a href="{% url 'withdraw_funds' %}">Withdraw</a>
+<a href="#">Daily Report</a>
+{% endblock %}
+
+{% block content %}
+<h2>Store Dashboard</h2>
+<p class="lead">Process deposits and withdrawals.</p>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h5>Recent Transactions</h5>
+        <p>Coming soon…</p>
+    </div>
+</div>
+{% endblock %}

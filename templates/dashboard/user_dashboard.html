@@ -1,0 +1,26 @@
+{% extends "dashboard/base.html" %}
+
+{% block menu %}
+<h5>User Menu</h5>
+<a href="#">Dashboard</a>
+<a href="{% url 'wallet_detail' %}">My Wallet</a>
+<a href="{% url 'transfer_reserve_to_liquid' %}">Transfer Reserve → Liquid</a>
+<a href="{% url 'my_transactions' %}">My Transactions</a>
+{% endblock %}
+
+{% block content %}
+<h2>User Dashboard</h2>
+<p class="lead">View and manage your wallet.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>Wallet Balance</h5>
+                <p>Liquid: Coming soon</p>
+                <p>Reserve: Coming soon</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
